@@ -1,5 +1,5 @@
 const http = require('http');
-require('dotenv').config();
+const require('dotenv').config();
 const port = process.env.listening_port;
 
 server = http.createServer((req, res) => {
