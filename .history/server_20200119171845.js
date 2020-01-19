@@ -64,7 +64,7 @@ server = http.createServer((req, res) => {
             servePage (res, 'home.html', {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',
-                articles: articles
+                articles: 'articles'
             });
             break
     }
