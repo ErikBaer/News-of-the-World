@@ -20,7 +20,7 @@ nav {
     border-radius: 3px;
 }
 
-.nav-link.active {
+.nav-link.active, {
     background-color: #ffaa44;
 }
 
