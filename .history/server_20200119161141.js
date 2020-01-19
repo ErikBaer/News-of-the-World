@@ -30,7 +30,7 @@ const servePage = (res, pageName, data) => {
 
     const html = <html></html>;
     const templateFunction = handlebars.compile(html);
-    res.end(templateFunction(data || {}));
+    res.end(templateFunction(data || {}))
 };
 
 const servePublicFile = (res, url) => {
