@@ -23,14 +23,12 @@ const articles = [
 ];
 
 const registerPartials = () => {
-
     partials = fs.readdirSync('partials/')
     partials.forEach(partial => {
     name = partial.split('.')[0];
-    html = fs.readFileSync('partials/' + partial, 'utf-8');
-    handlebars.registerPartial(name, html);  
-});
-}
+    html = fs.readFileSync('partials/' + partial, 'utf-8')
+    handlebars.registerPartial(name, html)
+} )
 
 registerPartials()
 

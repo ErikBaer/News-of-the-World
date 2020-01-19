@@ -28,7 +28,8 @@ const registerPartials = () => {
     partials.forEach(partial => {
     name = partial.split('.')[0];
     html = fs.readFileSync('partials/' + partial, 'utf-8');
-    handlebars.registerPartial(name, html);  
+    handlebars.registerPartial(name, html);
+    
 });
 }
 
