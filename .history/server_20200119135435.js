@@ -12,10 +12,9 @@ const servePage = (res, pageName) => {
     stream.pipe(res);
 };
 
-const servePublicFile = (res, url) => {
+const servePublicFile = (res, req.url) => {
     res.writeHead(200);
-    let stream = fs.createReadStream(path.join(__dirname, url))
-    stream.pipe(res);
+    let stream = fs.createReadStream(__dirname, url)
 }
 
 

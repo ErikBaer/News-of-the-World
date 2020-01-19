@@ -14,7 +14,7 @@ const servePage = (res, pageName) => {
 
 const servePublicFile = (res, url) => {
     res.writeHead(200);
-    let stream = fs.createReadStream(path.join(__dirname, url))
+    let stream = fs.createReadStream(__dirname, url)
     stream.pipe(res);
 }
 
