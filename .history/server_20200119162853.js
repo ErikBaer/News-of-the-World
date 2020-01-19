@@ -27,7 +27,7 @@ const servePage = (res, pageName, data) => {
     // res.writeHead(200);
     // let stream = fs.createReadStream('views/'  + pageName);
     // stream.pipe(res);
-    fs.readFile('views/' + pageName, {encoding: 'utf-8'}, (err, html) => {
+    fs.readFile('/views/' + pageName, {encoding: 'utf-8'}, (err, html) => {
         if(err) {
             console.log(err);
             res.writeHead(500);

@@ -27,17 +27,20 @@ const servePage = (res, pageName, data) => {
     // res.writeHead(200);
     // let stream = fs.createReadStream('views/'  + pageName);
     // stream.pipe(res);
-    fs.readFile('views/' + pageName, {encoding: 'utf-8'}, (err, html) => {
+    fs.readFile('/views' + pageName, {encoding: 'utf-8'}, (err, html) => {
         if(err) {
             console.log(err);
             res.writeHead(500);
             res.end()
         } else {
-            res.writeHead(200);
-            const templateFunction = handlebars.compile(html);
-            res.end(templateFunction(data || {}));
+            res.writeHead;
+            res.end(templateFunction(html))
         }
-    });
+    })
+
+    const html = <html></html>;
+    const templateFunction = handlebars.compile(html);
+    res.end(templateFunction(data || {}));
 };
 
 const servePublicFile = (res, url) => {
