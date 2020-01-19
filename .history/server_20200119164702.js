@@ -55,10 +55,7 @@ server = http.createServer((req, res) => {
     
     switch (req.url) {
         case '/settings':
-            servePage (res, 'settings.html', {
-                title: 'Settings',
-                heading: 'Welcome to your new Settings'
-            })
+            servePage (res, 'settings.html')
             break
         default:
             servePage (res, 'home.html', {

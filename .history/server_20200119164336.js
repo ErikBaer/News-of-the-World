@@ -24,7 +24,9 @@ const articles = [
 const port = process.env.port;
 
 const servePage = (res, pageName, data) => {
-
+    // res.writeHead(200);
+    // let stream = fs.createReadStream('views/'  + pageName);
+    // stream.pipe(res);
     fs.readFile('views/' + pageName, 'utf-8', (err, html) => {
         if(err) {
             console.log(err);
@@ -54,17 +56,11 @@ server = http.createServer((req, res) => {
     }
     
     switch (req.url) {
-        case '/settings':
-            servePage (res, 'settings.html', {
-                title: 'Settings',
-                heading: 'Welcome to your new Settings'
-            })
+        case '/home':
+            servePage (res, 'settings.html')
             break
         default:
-            servePage (res, 'home.html', {
-                title: 'News',
-                heading: 'Welcome to your new News Dashboard'
-            });
+            servePage (res, 'settings.html')
             break
     }
 });
