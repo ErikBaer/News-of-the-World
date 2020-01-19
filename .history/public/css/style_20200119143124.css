@@ -20,11 +20,10 @@ nav {
     border-radius: 3px;
 }
 
-.nav-link.active,
-nav-link.active:hover {
+.nav-link active {
     background-color: #ffaa44;
 }
 
 .nav-link:hover {
-    background-color: #ffaa44;
+    background-color: #5599ff;
 }
