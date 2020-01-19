@@ -13,8 +13,8 @@ const servePage = (res, pageName) => {
 server = http.createServer((req, res) => {
     res.writeHead(200);
     switch (req.url) {
-        case '/home':
-            servePage(res, 'home.html');
+        case '/admin':
+            servePage(res, 'admin.html');
             break
         default:
             servePage (res, 'settings.html')

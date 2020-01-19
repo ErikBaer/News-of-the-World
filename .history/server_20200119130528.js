@@ -6,15 +6,15 @@ const port = process.env.port;
 
 const servePage = (res, pageName) => {
     res.writeHead(200);
-    let stream = fs.createReadStream('views/'  + pageName);
+    let stream = fs.createReadStream('views'  + pageName);
     stream.pipe(res);
 };
 
 server = http.createServer((req, res) => {
     res.writeHead(200);
     switch (req.url) {
-        case '/home':
-            servePage(res, 'home.html');
+        case '/admin':
+            servePage(res, 'admin.html');
             break
         default:
             servePage (res, 'settings.html')
