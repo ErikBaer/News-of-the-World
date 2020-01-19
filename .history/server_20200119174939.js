@@ -23,11 +23,11 @@ const articles = [
 ];
 
 const registerPartials = () => {
-    html = fs.readFileSync('partials/head.html', 'utf-8');
-    handlebars.registerPartial('head', html);
+    html = fs.readFileSync('views/head.html', 'utf-8');
+    registerPartial('head', html);
 }
 
-registerPartials()
+registerPartial()
 
 const servePage = (res, pageName, data) => {
 

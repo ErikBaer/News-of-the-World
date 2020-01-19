@@ -22,12 +22,8 @@ const articles = [
 
 ];
 
-const registerPartials = () => {
-    html = fs.readFileSync('partials/head.html', 'utf-8');
-    handlebars.registerPartial('head', html);
-}
+const 
 
-registerPartials()
 
 const servePage = (res, pageName, data) => {
 
