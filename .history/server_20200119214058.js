@@ -34,6 +34,8 @@ const registerPartials = () => {
     html = fs.readFileSync('partials/' + partial, 'utf-8')
     handlebars.registerPartial(name, html)
 } )
+    console.log(partials)
+
 
 registerPartials()
 

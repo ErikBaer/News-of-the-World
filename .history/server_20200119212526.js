@@ -23,17 +23,17 @@ const articles = [
 ];
 
 const registerPartials = () => {
-    // html = fs.readFileSync('partials/head.html', 'utf-8');
-    // handlebars.registerPartial('head', html);
-    // navHtml = fs.readFileSync('partials/navigation.html', 'utf-8');
-    // handlebars.registerPartial('navigation', navHtml)
+    html = fs.readFileSync('partials/head.html', 'utf-8');
+    handlebars.registerPartial('head', html);
+    navHtml = fs.readFileSync('partials/navigation.html', 'utf-8');
+    handlebars.registerPartial('navigation', navHtml)
 }
-    partials = fs.readdirSync('partials/')
-    partials.forEach(partial => {
-    name = partial.split('.')[0];
-    html = fs.readFileSync('partials/' + partial, 'utf-8')
-    handlebars.registerPartial(name, html)
-} )
+    partials = fs.readdir('partials/', (err, files) => {
+    files.forEach(file=> {
+        
+    })
+    })
+
 
 registerPartials()
 
