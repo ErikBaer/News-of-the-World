@@ -6,7 +6,7 @@ const
     path = require('path'),
     handlebars = require('handlebars'),
     express = require('express'),
-    expresshandlebars = require('express-handlebars'),
+    express-handlebars = require('express-handlebars'),
     port = process.env.port;
 
 

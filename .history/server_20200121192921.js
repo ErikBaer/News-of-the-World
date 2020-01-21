@@ -6,12 +6,10 @@ const
     path = require('path'),
     handlebars = require('handlebars'),
     express = require('express'),
-    expresshandlebars = require('express-handlebars'),
+    express.handlebars = require('express-handlebars'),
     port = process.env.port;
 
 
-
-const server = express();
 
 
 const articles = [
@@ -91,6 +89,6 @@ server2 = http.createServer((req, res) => {
     }
 });
 
-server.listen(port, () => {
+server2.listen(port, () => {
     console.log('Server listening on port: ' + port);
 });
