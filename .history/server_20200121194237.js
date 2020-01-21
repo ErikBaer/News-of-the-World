@@ -15,19 +15,12 @@ const server = express();
 
 server.get('/home', (rq, res) => {
     res.render('home', {
-        title: 'News',
-        heading: 'Welcome to your new News Dashboard',
-        articles: articles,
-        homeActive: true
-    } 
-
-    )
+        
+    })
 })
 
 server.get('/settings', (req, res) => {
-    title: 'Settings',
-    heading: 'Welcome to your new Settings',
-    settingsActive: true
+
 })
 
 
