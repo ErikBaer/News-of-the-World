@@ -39,7 +39,7 @@ server.engine('html', expressHandlebars({
 
 server.set('view engine', 'html');
 
-//server.use(express.static('public'));
+server.use(express.static('public'));
 
 const articles = [
     {

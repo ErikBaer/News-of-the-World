@@ -34,7 +34,7 @@ server.set('viewDir', 'views');
 
 server.engine('html', expressHandlebars({
     extname: 'html',
-    partialsDir: 'partials/'
+    partialsDir: 'views/partials'
 }));
 
 server.set('view engine', 'html');

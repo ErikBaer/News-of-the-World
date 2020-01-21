@@ -34,12 +34,12 @@ server.set('viewDir', 'views');
 
 server.engine('html', expressHandlebars({
     extname: 'html',
-    partialsDir: 'partials/'
+    partialsDir: '/partials'
 }));
 
 server.set('view engine', 'html');
 
-//server.use(express.static('public'));
+server.use(express.static('public'));
 
 const articles = [
     {
