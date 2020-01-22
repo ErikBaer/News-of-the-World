@@ -1,10 +1,6 @@
 require('dotenv').config();
 
 const 
-    http = require('http'),
-    fs = require('fs'),
-    path = require('path'),
-    handlebars = require('handlebars'),
     express = require('express'),
     expressHandlebars = require('express-handlebars'),
     port = process.env.port;
