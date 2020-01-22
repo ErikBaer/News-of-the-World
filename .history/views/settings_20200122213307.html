@@ -18,14 +18,9 @@
                     <p>
                         <label class="form-label" for="news-api-category">Category</label>
                         <select id="news-api-category" name="news-api-category">
-                            {{#each newsApiCategories}}
-                            <option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>
-                            {{/each}}
+                            
                         </select> 
                     </p>
-                </fieldset>
-                <fieldset>
-                    <input type="submit" class="submit-button" value="Save">
                 </fieldset>
             </form>
         </div>
