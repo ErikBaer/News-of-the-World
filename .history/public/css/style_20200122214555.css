@@ -36,27 +36,9 @@ nav {
     border: 1px solid #ddbb66;
 }
 
-/* Settings forms*/
-
 .content-panel {
     padding: 1em;
     background-color: #eee;
     border: 1px solid black;
     border-radius: 2px;
-}
-
-.form-label {
-    display:inline-block;
-    width: 7em;
-}
-
-.text-input {
-    height: 20px;
-    width: 30em;
-    line-height: 28px;
-    font-size: 16px;
-}
-
-.fieldset {
-    border:none;
 }

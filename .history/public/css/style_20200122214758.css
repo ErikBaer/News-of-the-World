@@ -49,14 +49,3 @@ nav {
     display:inline-block;
     width: 7em;
 }
-
-.text-input {
-    height: 20px;
-    width: 30em;
-    line-height: 28px;
-    font-size: 16px;
-}
-
-.fieldset {
-    border:none;
-}
