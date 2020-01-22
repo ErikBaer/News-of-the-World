@@ -20,7 +20,8 @@ nav {
     border-radius: 3px;
 }
 
-.nav-link.active {
+.nav-link.active,
+nav-link.active:hover {
     background-color: #ffaa44;
 }
 
@@ -28,10 +29,3 @@ nav {
     background-color: #ffaa44;
 }
 
-.warning {
-    background-color: #ffdd88;
-    color: #cc0000;
-    font-weight: bold;
-    padding: 1em;
-    border: 1px solid #ddbb66;
-}
