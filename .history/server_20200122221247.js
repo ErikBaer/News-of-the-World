@@ -59,10 +59,8 @@ const renderSettings = (req, res) => {
 
 const receiveSettings = (req, res) => {
     console.log(req);
-    console.log('Wazzup')
     req.pipe(res);
 }
-
 server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
 server.get('/', renderHome)
 

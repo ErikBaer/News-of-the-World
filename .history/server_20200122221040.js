@@ -58,11 +58,9 @@ const renderSettings = (req, res) => {
 }; // Render Templates when called
 
 const receiveSettings = (req, res) => {
-    console.log(req);
-    console.log('Wazzup')
-    req.pipe(res);
+    console.log(req)
+    req.pipe(res)
 }
-
 server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
 server.get('/', renderHome)
 
