@@ -7,23 +7,21 @@ const
     port = process.env.port; // Get port from .env (Environment Variables)
     
 
-// const articles = [
-//     {
-//         url: 'http://example.com',
-//         title1: 'heute gibt es Wurst'
-//     },
-//     {
-//         url: 'http://example2.com',
-//         title1: 'Morgen gibt es Pommes'
-//     },
-//     {
-//         url: 'http://example3.com',
-//         title1: 'Dann gibt es Frikadelle'
-//     }
+const articles = [
+    {
+        url: 'http://example.com',
+        title1: 'heute gibt es Wurst'
+    },
+    {
+        url: 'http://example2.com',
+        title1: 'Morgen gibt es Pommes'
+    },
+    {
+        url: 'http://example3.com',
+        title1: 'Dann gibt es Frikadelle'
+    }
 
-// ]; // Fake array of articles -dummy-
-
-//console.log(newsapi)
+]; // Fake array of articles -dummy-
 
 const server = express(); // Initialize server
 

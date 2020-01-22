@@ -41,6 +41,7 @@ const renderHome = (req, res) => {
         .setApiKey(process.env.NEWS_API_KEY)
         .send()
         .then(response => {
+            
             res.render('home', {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',

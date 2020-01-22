@@ -21,7 +21,7 @@ const
 //         title1: 'Dann gibt es Frikadelle'
 //     }
 
-// ]; // Fake array of articles -dummy-
+]; // Fake array of articles -dummy-
 
 //console.log(newsapi)
 
@@ -41,11 +41,15 @@ const renderHome = (req, res) => {
         .setApiKey(process.env.NEWS_API_KEY)
         .send()
         .then(response => {
+            console.log('Results: ' + response.totalResults);
+            console.log('Results: ' + response.articles);
+            console.log('Results: ' + response.articles[0].url);
+            articles = response.articles;
             res.render('home', {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',
                 homeActive: true,
-                articles: response.articles
+                articles: articles
             });
         });
 };
