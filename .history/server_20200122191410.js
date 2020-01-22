@@ -35,7 +35,7 @@ const renderHome = (req, res) => {
                 heading: 'Welcome to your new News Dashboard',
                 homeActive: true,
                 articles: [],
-                message: 'Error retrieving articles from newsapi.org'
+                message: 'error retrieving articles from newsapi.org'
             }); 
         })
 };
