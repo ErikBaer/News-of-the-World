@@ -23,12 +23,12 @@ server.use(bodyParser.urlencoded({
 server.use(express.static('public')); // Serve style.css directly from public
 
 const readSettings = () => {
-   try{
-    return JSON.parse(fs.readFileSync('settings.json'))
-     } catch (e) {
-         return {}
+    file = JSON.parse(fs.readFileSync('settings.json'))
+     return (file)? file:{
+         'news-api-key': 1234,
+         'news-api-category': health 
      }
-}
+} 
 
 const renderHome = (req, res) => {
     let articles = [],
@@ -52,6 +52,7 @@ const renderHome = (req, res) => {
             });
         })
         }
+
 
 const renderSettings = (req, res) => {
     const settings = readSettings()

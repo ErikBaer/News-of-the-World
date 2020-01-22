@@ -29,6 +29,8 @@ const readSettings = () => {
          return {}
      }
 }
+    
+
 
 const renderHome = (req, res) => {
     let articles = [],
@@ -52,6 +54,7 @@ const renderHome = (req, res) => {
             });
         })
         }
+
 
 const renderSettings = (req, res) => {
     const settings = readSettings()
