@@ -18,8 +18,6 @@ server.set('view engine', 'html'); // Set Template engine
 server.use(express.static('public')); // Serve style.css directly from public
 
 const renderHome = (req, res) => {
-    let articles = [],
-        message = '';
     newsapi
         .setApiKey(process.env.NEWS_API_KEY)
         .send()
@@ -34,11 +32,13 @@ const renderHome = (req, res) => {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',
                 homeActive: true,
-                articles,
-                message
+                articles: articles,
+                message: message
             });
         })
-        }
+        })
+
+};
 
 const renderSettings = (req, res) => {
     res.render('settings', {

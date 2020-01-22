@@ -27,18 +27,19 @@ const renderHome = (req, res) => {
             articles = response.articles
         })
         .catch(err => {
-            message= 'Error retrieving articles from newsapi.org';  
-        })
-        .then(response => {
+                message = 'Error retrieving articles from newsapi.org';
+            }); 
+        
+        .then(() => {
             res.render('home', {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',
                 homeActive: true,
                 articles,
-                message
+                messages
             });
         })
-        }
+};
 
 const renderSettings = (req, res) => {
     res.render('settings', {

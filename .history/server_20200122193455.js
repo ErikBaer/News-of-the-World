@@ -18,27 +18,27 @@ server.set('view engine', 'html'); // Set Template engine
 server.use(express.static('public')); // Serve style.css directly from public
 
 const renderHome = (req, res) => {
-    let articles = [],
-        message = '';
     newsapi
         .setApiKey(process.env.NEWS_API_KEY)
         .send()
-        .then(response => {
-            articles = response.articles
-        })
-        .catch(err => {
-            message= 'Error retrieving articles from newsapi.org';  
-        })
         .then(response => {
             res.render('home', {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',
                 homeActive: true,
-                articles,
-                message
+                articles: response.articles
             });
         })
-        }
+        .catch(err => {
+            res.render('home', {
+                title: 'News',
+                heading: 'Welcome to your new News Dashboard',
+                homeActive: true,
+                articles: [],
+                message: 'Error retrieving articles from newsapi.org'
+            }); 
+        })
+};
 
 const renderSettings = (req, res) => {
     res.render('settings', {
