@@ -19,7 +19,7 @@ const articles = [
         title1: 'Dann gibt es Frikadelle'
     }
 
-]; // Fake array of articles -dummy-
+];
 
 const server = express(); // Initialize server
 
@@ -28,7 +28,7 @@ server.engine('html', expressHandlebars({
     partialsDir: 'partials/'
 })); // Define Template engine
 
-server.set('view engine', 'html'); // Set Template engine
+server.set('view engine', 'html'); //Set Template engine
 
 server.use(express.static('public')); // Serve style.css directly from public
 

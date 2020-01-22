@@ -28,7 +28,7 @@ server.engine('html', expressHandlebars({
     partialsDir: 'partials/'
 })); // Define Template engine
 
-server.set('view engine', 'html'); // Set Template engine
+server.set('view engine', 'html'); //Set Template engine
 
 server.use(express.static('public')); // Serve style.css directly from public
 
