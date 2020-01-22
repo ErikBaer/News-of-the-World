@@ -23,26 +23,22 @@ const articles = [
 
 const server = express();
 
-const renderHome = (req, res) => {
+server.get('/home', (req, res) => {
     res.render('home', {
         title: 'News',
         heading: 'Welcome to your new News Dashboard',
         articles: articles,
         homeActive: true
     })
-};
+})
 
-const renderSettings = (req, res) => {
+server.get('/settings', (req, res) => {
     res.render('settings', {
         title: 'Settings',
         heading: 'Welcome to your new Settings',
         settingsActive: true
     })
-};
-
-server.get('/home', renderHome)
-
-server.get('/settings', renderSettings)
+})
 
 server.set('viewDir', 'views');
 
