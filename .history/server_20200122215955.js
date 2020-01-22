@@ -42,8 +42,8 @@ const renderHome = (req, res) => {
 
 const mapNewsCategories= categoryName => {
     return {
-        value: categoryName,
-        label: categoryName,
+        value: categoryName;
+        label: categoryName;
         selected:false
     }
 }

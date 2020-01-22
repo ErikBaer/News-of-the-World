@@ -40,20 +40,12 @@ const renderHome = (req, res) => {
         })
         }
 
-const mapNewsCategories= categoryName => {
-    return {
-        value: categoryName,
-        label: categoryName,
-        selected:false
-    }
-}
-
 const renderSettings = (req, res) => {
     res.render('settings', {
         title: 'Settings',
         heading: 'Welcome to your new Settings',
         settingsActive: true,
-        newsApiCategories: newsapi.getCategories().map(mapNewsCategories)
+        newsApiCategories: newsapi.getCategories()
     })
 }; // Render Templates when called
 
