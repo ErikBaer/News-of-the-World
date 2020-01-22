@@ -59,9 +59,10 @@ const renderSettings = (req, res) => {
     })
 }; // Render Templates when called
 
-function receiveSettings (req, res) {    console.log('hello')
-//     bodyPart = req.body;
-//     req.pipe(res);
+const receiveSettings = (req, res) => {
+   console.log('hello')
+    bodyPart = req.body;
+    req.pipe(res);
 }
 
 server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
@@ -69,7 +70,7 @@ server.get('/', renderHome)
 
 server.get('/settings', renderSettings);
 server.get('/admin', renderSettings);
-server.post('/settings', receiveSettings);
+server.post('/settings', receiveSettings)
 
 server.set('viewDir', 'views'); // Set directory for Templates
 

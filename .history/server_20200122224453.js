@@ -59,7 +59,8 @@ const renderSettings = (req, res) => {
     })
 }; // Render Templates when called
 
-function receiveSettings (req, res) {    console.log('hello')
+const receiveSettings = (req, res) => {
+//    console.log('hello')
 //     bodyPart = req.body;
 //     req.pipe(res);
 }

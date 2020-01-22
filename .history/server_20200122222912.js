@@ -59,9 +59,10 @@ const renderSettings = (req, res) => {
     })
 }; // Render Templates when called
 
-function receiveSettings (req, res) {    console.log('hello')
-//     bodyPart = req.body;
-//     req.pipe(res);
+const receiveSettings = (req, res) => {
+    console.log(req);
+    console.log('Wazzup')
+    req.pipe(res);
 }
 
 server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
@@ -69,13 +70,10 @@ server.get('/', renderHome)
 
 server.get('/settings', renderSettings);
 server.get('/admin', renderSettings);
-server.post('/settings', receiveSettings);
+server.post('/settings', receiveSettings)
 
 server.set('viewDir', 'views'); // Set directory for Templates
 
 server.listen(port, () => {
     console.log('Server listening on port: ' + port);
 }); // Activate server on defined port
-
-
-
