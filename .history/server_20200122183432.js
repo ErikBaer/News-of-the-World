@@ -42,7 +42,7 @@ const renderHome = (req, res) => {
             res.render('home', {
                 title: 'News',
                 heading: 'Welcome to your new News Dashboard',
-                articles: response.articles,
+                articles: articles,
                 homeActive: true
             });
         });
