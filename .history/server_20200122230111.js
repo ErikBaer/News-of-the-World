@@ -16,7 +16,7 @@ server.engine('html', expressHandlebars({
 
 server.set('view engine', 'html'); // Set Template engine
 
-server.use(bodyParser.urlencoded())
+//server.use(bodyParser.urlencoded())
 server.use(express.static('public')); // Serve style.css directly from public
 
 const renderHome = (req, res) => {
@@ -60,7 +60,7 @@ const renderSettings = (req, res) => {
 }; // Render Templates when called
 
 function receiveSettings (req, res) {   
-     console.log(req.body);
+     console.log(req);
      req.pipe(res);
 }
 

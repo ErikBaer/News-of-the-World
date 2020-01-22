@@ -60,7 +60,7 @@ const renderSettings = (req, res) => {
 }; // Render Templates when called
 
 function receiveSettings (req, res) {   
-     console.log(req.body);
+     console.log(req);
      req.pipe(res);
 }
 

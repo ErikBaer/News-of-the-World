@@ -16,7 +16,7 @@ server.engine('html', expressHandlebars({
 
 server.set('view engine', 'html'); // Set Template engine
 
-server.use(bodyParser.urlencoded())
+//server.use(bodyParser.urlencoded())
 server.use(express.static('public')); // Serve style.css directly from public
 
 const renderHome = (req, res) => {
