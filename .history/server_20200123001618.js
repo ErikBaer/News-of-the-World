@@ -37,7 +37,6 @@ const renderHome = (req, res) => {
         settings = readSettings();
     newsapi // Access newsapi by async promise
         .setApiKey(settings['news-api-key'] || process.env.NEWS_API_KEY || '')
-        .setCategory(settings['news-api-category'] || 'business')
         .send()
         .then(response => {
             articles = response.articles
