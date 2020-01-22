@@ -45,6 +45,13 @@ const renderHome = (req, res) => {
         })
         }
 
+const mapNewsCategories= categoryName => {
+    return {
+        value: categoryName,
+        label: categoryName,
+        selected:false
+    }
+} // Create an Array of Objects from the Array of Categories
 
 const renderSettings = (req, res) => {
     const settings = JSON.parse(fs.readFileSync('settings.json'))
@@ -52,14 +59,8 @@ const renderSettings = (req, res) => {
         title: 'Settings',
         heading: 'Welcome to your new Settings',
         settingsActive: true,
-        newsApiKey: settings['news-api-key'] || '',
-        newsApiCategories: newsapi.getCategories().map(categoryName => {
-            return {
-                value: categoryName,
-                label: categoryName,
-                selected:categoryName === settings['news-api-category']
-            }
-        })
+        newsApiKey: settings['newsApiKey'] || '',
+        newsApiCategories: newsapi.getCategories().map(mapNewsCategories)
     })
 }; // Render Templates when called
 

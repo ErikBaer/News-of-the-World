@@ -45,6 +45,13 @@ const renderHome = (req, res) => {
         })
         }
 
+const mapNewsCategories= categoryName => {
+    return {
+        value: categoryName,
+        label: categoryName,
+        selected:false
+    }
+} // Create an Array of Objects from the Array of Categories
 
 const renderSettings = (req, res) => {
     const settings = JSON.parse(fs.readFileSync('settings.json'))

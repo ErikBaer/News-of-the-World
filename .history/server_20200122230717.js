@@ -17,9 +17,7 @@ server.engine('html', expressHandlebars({
 
 server.set('view engine', 'html'); // Set Template engine
 
-server.use(bodyParser.urlencoded({
-    extended: false
-}))
+server.use(bodyParser.urlencoded())
 server.use(express.static('public')); // Serve style.css directly from public
 
 const renderHome = (req, res) => {
@@ -45,27 +43,26 @@ const renderHome = (req, res) => {
         })
         }
 
+const mapNewsCategories= categoryName => {
+    return {
+        value: categoryName,
+        label: categoryName,
+        selected:false
+    }
+} // Create an Array of Objects from the Array of Categories
 
 const renderSettings = (req, res) => {
-    const settings = JSON.parse(fs.readFileSync('settings.json'))
     res.render('settings', {
         title: 'Settings',
         heading: 'Welcome to your new Settings',
         settingsActive: true,
-        newsApiKey: settings['news-api-key'] || '',
-        newsApiCategories: newsapi.getCategories().map(categoryName => {
-            return {
-                value: categoryName,
-                label: categoryName,
-                selected:categoryName === settings['news-api-category']
-            }
-        })
+        newsApiCategories: newsapi.getCategories().map(mapNewsCategories)
     })
 }; // Render Templates when called
 
 function receiveSettings (req, res) {   
-     fs.writeFileSync('settings.json', JSON.stringify(req.body));
-     renderSettings(req, res);
+     console.log(req.body);
+     req.pipe(res);
 }
 
 server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
