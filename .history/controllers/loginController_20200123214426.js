@@ -4,7 +4,7 @@ const renderLogin = (req, res) => {
     res.render('login', {
         header: 'Login',
         loginActive: true,
-        loginFailed: req.body.loginFailed;
+        loginFailed: req.body.loginFailed
     })
 }
 
