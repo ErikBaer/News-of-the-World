@@ -1,9 +1,16 @@
 const
-    newsapi = require('newsapi-wrapper'),
-    settingsService = require('../services/settingsService.js');
+    newsapi = require('newsapi-wrapper');
        
 
 
+const readSettings = () => {
+    try{
+        return JSON.parse(fs.readFileSync('settings.json')) //look for json with settings, parse result string back to json
+        } catch (e) {
+            return {
+            }
+        } 
+    } // catch error if there is no json
 
 function receiveSettings (req, res) {   
     fs.writeFileSync('settings.json', JSON.stringify(req.body));
@@ -12,7 +19,7 @@ function receiveSettings (req, res) {
         }
 
 const renderSettings = (req, res) => {
-    const settings = settingsService.readSettings() //import json
+    const settings = readSettings() //import json
     res.render('settings', {
         title: 'Settings',
         heading: 'Welcome to your new Settings',

@@ -1,6 +1,6 @@
 const
     newsapi = require('newsapi-wrapper'),
-    settingsService = require('../services/settingsService.js');
+    settingsController = require('../controllers/settingsController.js');
        
 
 
@@ -12,7 +12,7 @@ function receiveSettings (req, res) {
         }
 
 const renderSettings = (req, res) => {
-    const settings = settingsService.readSettings() //import json
+    const settings = settingsController.readSettings() //import json
     res.render('settings', {
         title: 'Settings',
         heading: 'Welcome to your new Settings',
