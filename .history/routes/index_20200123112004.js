@@ -2,21 +2,22 @@ const router = require('express').Router(),
     newsapi = require('newsapi-wrapper'),
     fs = require('fs');
 
-
-const readSettings = () => {
-    try{
-        return JSON.parse(fs.readFileSync('settings.json')) //look for json with settings, parse result string back to json
-        } catch (e) {
-            return {
-            }
-        } 
-    } // catch error if there is no json
+    
 
 function receiveSettings (req, res) {   
     fs.writeFileSync('settings.json', JSON.stringify(req.body));
     renderSettings(req, res); // accepts the request.body, creates a JSON and saves it 
        
        }
+
+const readSettings = () => {
+try{
+    return JSON.parse(fs.readFileSync('settings.json')) //look for json with settings, parse result string back to json
+    } catch (e) {
+        return {
+        }
+    } 
+} // catch error if there is no json
 
 const renderHome = (req, res) => {
     let articles = [],
