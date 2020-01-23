@@ -12,6 +12,6 @@ router.get('/', newsController.renderHome)
 router.get('/settings', settingsController.renderSettings);
 router.get('/admin', settingsController.renderSettings);
 router.post('/settings', settingsController.receiveSettings);
-//router.post('/login', loginController.login);
+router.post('/login'), login
 
 module.exports = router;
