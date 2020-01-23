@@ -17,7 +17,7 @@ router.post('/settings', settingsController.receiveSettings);
 //login
 router.get('/login', loginController.renderLogin);
 router.post('/login', loginController.submitLogin);
-router.get('/logout', loginController.logout);
+router.get('/logout')
 
 
 module.exports = router;

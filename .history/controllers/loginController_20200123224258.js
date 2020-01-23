@@ -24,14 +24,12 @@ const submitLogin = (req, res) => {
 }
 
 const logout = (req, res) => {
-    if(req.session) {
-    delete req.session.isLoggedIn;
+    if(req.session)
+    delete req.session.isLoggedin;
 }
-    res.redirect('/home');
-}
+res.redirect
 
 module.exports = {
     renderLogin,
-    submitLogin,
-    logout
+    submitLogin
 }
