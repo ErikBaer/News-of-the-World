@@ -5,6 +5,7 @@ const
     expressHandlebars = require('express-handlebars'),
     bodyParser = require('body-parser'),
     routing = require('./routes'),
+    newsController = require('../controllers/newsController.js'),
     port = process.env.port; // Get port from .env (Environment Variables)
 
 

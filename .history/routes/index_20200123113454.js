@@ -2,8 +2,7 @@ const
     router = require('express').Router(),
 
     newsapi = require('newsapi-wrapper'),
-    fs = require('fs'),
-    newsController = require('../controllers/newsController.js');
+    fs = require('fs');
 
 
 const readSettings = () => {

@@ -4,9 +4,9 @@ const
     express = require('express'),
     expressHandlebars = require('express-handlebars'),
     bodyParser = require('body-parser'),
-    routing = require('./routes'),
+    routing = require('./routes')
     port = process.env.port; // Get port from .env (Environment Variables)
-
+    
 
 const server = express(); // Initialize server
 
