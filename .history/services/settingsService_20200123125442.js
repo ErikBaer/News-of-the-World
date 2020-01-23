@@ -2,12 +2,11 @@ fs = require('fs');
 
 const readSettings = () => {
     return new Promise(resolve => {
-        fs.readFileSync('settings.json', 'utf-8', (err, data) => {
+        fs.readFileSync('settings.json', 'utf-8', (err, data) =>
         if (!err) {
             resolve(JSON.parse(data));
         }else {
             resolve({});
-        }
         });
     }) 
 }
