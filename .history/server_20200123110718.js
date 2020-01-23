@@ -3,7 +3,9 @@ require('dotenv').config();
 const 
     express = require('express'),
     expressHandlebars = require('express-handlebars'),
+    newsapi = require('newsapi-wrapper'),
     bodyParser = require('body-parser'),
+    fs = require('fs'),
     port = process.env.port; // Get port from .env (Environment Variables)
 
 const server = express(); // Initialize server
