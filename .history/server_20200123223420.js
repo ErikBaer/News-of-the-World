@@ -33,7 +33,7 @@ server.use(session({
 server.use((req, res, next) => {
     res.locals.isLoggedIn = req.session && req.session.isLoggedIn;
     next();
-})
+}
 
 server.use('/', routing);
 
