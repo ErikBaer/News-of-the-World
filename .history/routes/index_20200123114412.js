@@ -4,7 +4,7 @@ const
     newsapi = require('newsapi-wrapper'),
     fs = require('fs'),
     newsController = require('../controllers/newsController.js'),
-    settingsController = require('../controllers/settingsController.js');
+    settingsController = require('../controller/settingsController.js');
 
 
 

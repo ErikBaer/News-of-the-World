@@ -4,7 +4,7 @@ const
     newsapi = require('newsapi-wrapper'),
     fs = require('fs'),
     newsController = require('../controllers/newsController.js'),
-    settingsController = require('../controllers/settingsController.js');
+    settingsController = require('../controller/settingsController.js');
 
 
 
@@ -14,8 +14,8 @@ router.get('/home', newsController.renderHome); // Configure ->get rendered Temp
 router.get('/', newsController.renderHome)
 
 //settings
-router.get('/settings', settingsController.renderSettings);
-router.get('/admin', settingsController.renderSettings);
-router.post('/settings', settingsController.receiveSettings);
+router.get('/settings', renderSettings);
+router.get('/admin', renderSettings);
+router.post('/settings', receiveSettings);
 
 module.exports = router;
