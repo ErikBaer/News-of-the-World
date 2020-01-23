@@ -1,6 +1,6 @@
 const 
     newsapi = require('newsapi-wrapper'),
-    fs = require('fs')
+    fs = require('file')
 
 const readSettings = () => {
     try{
