@@ -67,7 +67,7 @@ const renderSettings = (req, res) => {
             return {
                 value: categoryName,
                 label: categoryName,
-                selected:categoryName === settings['news-api-category'] //create object from category-names
+                selected:categoryName === settings['news-api-category']
             }
         })
     })
@@ -76,7 +76,7 @@ const renderSettings = (req, res) => {
 function receiveSettings (req, res) {   
      fs.writeFileSync('settings.json', JSON.stringify(req.body));
      renderSettings(req, res); // accepts the request.body, creates a JSON and saves it 
-
+     
 }
 
 server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
