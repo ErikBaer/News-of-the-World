@@ -5,9 +5,8 @@ const
 const renderHome = (req, res) => {
     let articles = [],
         message = '';
-
+        
     newsService.getNews()
-    
         .then(response => {
             articles = response.articles
         })

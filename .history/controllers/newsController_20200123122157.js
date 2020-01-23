@@ -1,13 +1,18 @@
 const 
-    newsService = require('../services/newsService.js');
+    newsapi = require('newsapi-wrapper'),
+    fs = require('fs'),
+    settingsService = require('../services/settingsService.js');
+    newsService = require('../services/newsService.js')
 
 
 const renderHome = (req, res) => {
     let articles = [],
         message = '';
-
-    newsService.getNews()
-    
+        settings = settingsService.readSettings();
+    newsapi // Access newsapi by async promise
+        .setApiKey(settings['news-api-key'] || process.env.NEWS_API_KEY || '')
+        .setCategory(settings['news-api-category'] || 'business')
+        .send()
         .then(response => {
             articles = response.articles
         })

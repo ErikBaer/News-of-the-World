@@ -3,11 +3,7 @@ const
 
 
 const renderHome = (req, res) => {
-    let articles = [],
-        message = '';
-
-    newsService.getNews()
-    
+    newsService.requestPromise()
         .then(response => {
             articles = response.articles
         })
