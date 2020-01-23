@@ -4,7 +4,7 @@ const
     express = require('express'),
     expressHandlebars = require('express-handlebars'),
     bodyParser = require('body-parser'),
-    routing = require('./routes')
+    routing = require()
     port = process.env.port; // Get port from .env (Environment Variables)
 
 const server = express(); // Initialize server
@@ -21,8 +21,6 @@ server.use(bodyParser.urlencoded({
 })) // middleware encoding the the body of the response to response.body for easy access
 
 server.use(express.static('public')); // Serve style.css directly from public
-
-server.use('/', routing);
 
 server.set('viewDir', 'views'); // Set directory for Templates
 

@@ -60,12 +60,12 @@ const renderSettings = (req, res) => {
 }; // Render Templates when called
 
 //home
-router.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
-router.get('/', renderHome)
+server.get('/home', renderHome); // Configure ->get rendered Templates from multiple routes
+server.get('/', renderHome)
 
 //settings
-router.get('/settings', renderSettings);
-router.get('/admin', renderSettings);
-router.post('/settings', receiveSettings);
+server.get('/settings', renderSettings);
+server.get('/admin', renderSettings);
+server.post('/settings', receiveSettings);
 
 modules.export = router;

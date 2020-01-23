@@ -22,8 +22,6 @@ server.use(bodyParser.urlencoded({
 
 server.use(express.static('public')); // Serve style.css directly from public
 
-server.use('/', routing);
-
 server.set('viewDir', 'views'); // Set directory for Templates
 
 server.listen(port, () => {
