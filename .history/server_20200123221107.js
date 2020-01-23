@@ -24,11 +24,10 @@ server.use(bodyParser.urlencoded({
 
 server.use(express.static('public')); // Serve style.css directly from public
 
-server.use(session({
+server.use(express.session({
     secret:process.env.SESSION_SECRET || "defaultSecret",
-    resave: false,
-    saveUninitialized: true
-}));
+
+}))
 
 server.use('/', routing);
 
