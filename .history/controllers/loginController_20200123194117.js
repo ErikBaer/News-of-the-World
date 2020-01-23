@@ -8,7 +8,7 @@ const renderLogin = (req, res) => {
 }
 
 const getLogin = (req, res) => {
-    loginService.saveLogin(req,res)
+    renderLogin(req,res)
 }
 
 module.exports = {

@@ -1,4 +1,4 @@
-loginService = require('../services/loginService')
+loginService = require('loginService')
 
 const renderLogin = (req, res) => {
     res.render('login', {
@@ -8,10 +8,9 @@ const renderLogin = (req, res) => {
 }
 
 const getLogin = (req, res) => {
-    loginService.saveLogin(req,res)
+    saveLogin(req,res)
 }
 
 module.exports = {
-    renderLogin,
-    getLogin
+    renderLogin
 }
