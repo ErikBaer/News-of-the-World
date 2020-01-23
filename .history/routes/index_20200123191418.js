@@ -15,5 +15,4 @@ router.get('/admin', settingsController.renderSettings);
 router.post('/settings', settingsController.receiveSettings);
 router.get('/login', loginController.renderLogin);
 
-
 module.exports = router;

@@ -13,7 +13,6 @@ router.get('/', newsController.renderHome)
 router.get('/settings', settingsController.renderSettings);
 router.get('/admin', settingsController.renderSettings);
 router.post('/settings', settingsController.receiveSettings);
-router.get('/login', loginController.renderLogin);
-
+router.post('/login', loginController.login);
 
 module.exports = router;
