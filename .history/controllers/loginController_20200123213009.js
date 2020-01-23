@@ -8,6 +8,7 @@ const renderLogin = (req, res) => {
 }
 
 const submitLogin = (req, res) => {
+    console.log(req.body);
     userService.verifyLogin(req.body.username, req.body.password)
         .then(loginSuccess => {
             if(loginSuccess) {
@@ -16,7 +17,7 @@ const submitLogin = (req, res) => {
                 renderLogin(req, res);
             }
         })
-    
+    return renderLogin(req, res)
 }
 
 module.exports = {

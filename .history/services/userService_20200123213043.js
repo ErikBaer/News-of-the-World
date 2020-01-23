@@ -5,9 +5,9 @@ const bcrypt = require('bcrypt'),
 
 verifyLogin = (username, password) => {
     if (username !== 'admin') {
-        return Promise.resolve(false);
+        return new Promise.resolve(false);
     }
-    return bcrypt.compare(password, ADMIN_HASH)
+    bcrypt.compare(password, ADMIN_HASH)
 }
 
 module.exports = {

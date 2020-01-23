@@ -8,15 +8,10 @@ const renderLogin = (req, res) => {
 }
 
 const submitLogin = (req, res) => {
+    console.log(req.body);
     userService.verifyLogin(req.body.username, req.body.password)
-        .then(loginSuccess => {
-            if(loginSuccess) {
-                res.redirect('/settings')
-            } else {
-                renderLogin(req, res);
-            }
-        })
-    
+        .then
+    return renderLogin(req, res)
 }
 
 module.exports = {

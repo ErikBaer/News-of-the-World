@@ -16,7 +16,7 @@ const submitLogin = (req, res) => {
                 renderLogin(req, res);
             }
         })
-    
+    return renderLogin(req, res)
 }
 
 module.exports = {
