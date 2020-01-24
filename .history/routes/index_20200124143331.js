@@ -11,9 +11,9 @@ router.get('/home', newsController.renderHome); // Configure ->get rendered Temp
 router.get('/', newsController.renderHome)
 
 //settings
-router.get('/settings', auth, settingsController.renderSettings);
-router.get('/admin', auth, settingsController.renderSettings);
-router.post('/settings', auth, settingsController.receiveSettings);
+router.get('/settings', settingsController.renderSettings);
+router.get('/admin', settingsController.renderSettings);
+router.post('/settings', settingsController.receiveSettings);
 
 //login
 router.get('/login', loginController.renderLogin);
