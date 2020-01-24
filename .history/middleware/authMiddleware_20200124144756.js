@@ -5,7 +5,7 @@ if (req.session && req.session.isLoggedIn===true) {
 }else {
     console.log('User is not logged in - Acess denied');
     res.status(401);
-    res.render('not-authorized')
+    res.render('')
 }
 }
 
